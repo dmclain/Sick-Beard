@@ -144,13 +144,10 @@ MIN_SEARCH_FREQUENCY = 10
 DEFAULT_SEARCH_FREQUENCY = 60
 
 EZRSS = False
-<<<<<<< HEAD
 TVTORRENTZ = False
 TVTORRENTZ_PASSKEY = None
-=======
 FRESHONTV = False
 FRESHONTV_PASSKEY = None
->>>>>>> damoxc/master
 TVTORRENTS = False
 TVTORRENTS_DIGEST = None
 TVTORRENTS_HASH = None
@@ -494,19 +491,16 @@ def initialize(consoleLogging=True):
         EZRSS = bool(check_setting_int(CFG, 'General', 'use_torrent', 0))
         if not EZRSS:
             EZRSS = bool(check_setting_int(CFG, 'EZRSS', 'ezrss', 0))
-<<<<<<< HEAD
        
         TVTORRENTS = bool(check_setting_int(CFG, 'TVTORRENTZ', 'tvtorrentz', 0))    
         TVTORRENTZ_PASSKEY = check_setting_str(CFG, 'TVTORRENTZ', 'tvtorrentz_passkey', '')
 
         TVTORRENTS = bool(check_setting_int(CFG, 'TVTORRENTS', 'tvtorrents', 0))    
-=======
 
         FRESHONTV = bool(check_setting_int(CFG, 'FRESHONTV', 'freshontv', 0))
         FRESHONTV_PASSKEY = check_setting_str(CFG, 'FRESHONTV', 'freshontv_passkey', '')
 
         TVTORRENTS = bool(check_setting_int(CFG, 'TVTORRENTS', 'tvtorrents', 0))
->>>>>>> damoxc/master
         TVTORRENTS_DIGEST = check_setting_str(CFG, 'TVTORRENTS', 'tvtorrents_digest', '')
         TVTORRENTS_HASH = check_setting_str(CFG, 'TVTORRENTS', 'tvtorrents_hash', '')
 
@@ -986,19 +980,16 @@ def save_config():
 
     new_config['EZRSS'] = {}
     new_config['EZRSS']['ezrss'] = int(EZRSS)
-<<<<<<< HEAD
     
     new_config['TVTORRENTZ'] = {}
     new_config['TVTORRENTZ']['tvtorrentz'] = int(TVTORRENTZ)
     new_config['TVTORRENTZ']['tvtorrentz_passkey'] = TVTORRENTZ_PASSKEY
  
-=======
 
     new_config['FRESHONTV'] = {}
     new_config['FRESHONTV']['freshontv'] = int(FRESHONTV)
     new_config['FRESHONTV']['freshontv_passkey'] = FRESHONTV_PASSKEY
 
->>>>>>> damoxc/master
     new_config['TVTORRENTS'] = {}
     new_config['TVTORRENTS']['tvtorrents'] = int(TVTORRENTS)
     new_config['TVTORRENTS']['tvtorrents_digest'] = TVTORRENTS_DIGEST
