@@ -1085,13 +1085,10 @@ class ConfigProviders:
                 sickbeard.WOMBLE = curEnabled
             elif curProvider == 'ezrss':
                 sickbeard.EZRSS = curEnabled
-<<<<<<< HEAD
             elif curProvider == 'tvtorrentz':
                 sickbeard.TVTORRENTZ = curEnabled
-=======
             elif curProvider == 'freshontv':
                 sickbeard.FRESHONTV = curEnabled
->>>>>>> damoxc/master
             elif curProvider == 'tvtorrents':
                 sickbeard.TVTORRENTS = curEnabled
             elif curProvider in newznabProviderDict:
@@ -1099,13 +1096,8 @@ class ConfigProviders:
             else:
                 logger.log(u"don't know what "+curProvider+" is, skipping")
 
-<<<<<<< HEAD
         sickbeard.TVTORRENTZ_PASSKEY = tvtorrentz_passkey.strip()
-
-=======
         sickbeard.FRESHONTV_PASSKEY = freshontv_passkey.strip()
-
->>>>>>> damoxc/master
         sickbeard.TVTORRENTS_DIGEST = tvtorrents_digest.strip()
         sickbeard.TVTORRENTS_HASH = tvtorrents_hash.strip()
 
@@ -1360,21 +1352,12 @@ def havePLEX():
 
 def HomeMenu():
     return [
-<<<<<<< HEAD
         { 'title': 'Add Shows',              'path': 'home/addShows/',                                          },
         { 'title': 'Manual Post-Processing', 'path': 'home/postprocess/'                                        },
         { 'title': 'Update XBMC',            'path': 'home/updateXBMC/', 'requires': haveXBMC                   },
         { 'title': 'Update Plex',            'path': 'home/updatePLEX/', 'requires': havePLEX                   },
         { 'title': 'Restart',                'path': 'home/restart/?pid='+str(sickbeard.PID), 'confirm': True   },
         { 'title': 'Shutdown',               'path': 'home/shutdown/', 'confirm': True                          },
-=======
-    { 'title': 'Add Shows',               'path': 'home/addShows/',                         },
-    { 'title': 'Manual Post-Processing', 'path': 'home/postprocess/'                        },
-    { 'title': 'Update XBMC',            'path': 'home/updateXBMC/', 'requires': haveXBMC   },
-    { 'title': 'Update Plex',            'path': 'home/updatePLEX/', 'requires': havePLEX   },
-    { 'title': 'Restart',                'path': 'home/restart/?pid='+str(sickbeard.PID)    },
-    { 'title': 'Shutdown',               'path': 'home/shutdown/'                           },
->>>>>>> damoxc/master
     ]
 
 class HomePostProcess:
